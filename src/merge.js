@@ -24,7 +24,7 @@ let merge = (target,from)=>{
 }
 
 let deepClone = function(obj) {
-    if (typeof obj !== 'object'){ 
+    if (!obj || typeof obj !== 'object'){ 
     		return obj; 
     	}
     var clone = Array.isArray(obj) ? obj.slice() : Object.assign({}, obj);
